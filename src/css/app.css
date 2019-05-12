@@ -23,6 +23,13 @@
   height: 100%;
 }
 
+.icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-left: 46%;
+}
+
 /* Form CSS*/
 .form {
   display: flex;
@@ -50,6 +57,19 @@
 .form button:hover {
   color: #3c80ff;
   transition-duration: 300ms;
+}
+
+/*Data css*/
+.Data-Container h2 {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.conditions p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid white;
 }
 
 /*# sourceMappingURL=app.css.map */

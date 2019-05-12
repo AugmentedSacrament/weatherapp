@@ -29,10 +29,11 @@ export default class Weather extends Component{
         const call =  await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
 
         const data = await call.json();
-        
+
         this.setState({
             main:data.main,
-            description:data.weather.description,
+            description:data.weather[0].description,
+            icon:data.weather[0].icon,
             sunrise: data.sys.sunrise,
             sunset:data.sys.sunset,
             windSpeed: data.wind.speed,
@@ -46,7 +47,7 @@ export default class Weather extends Component{
             <div className='weather-container'>
                 <Form submit={this.getWeather}/>
 
-                <div className='Data Container'>
+                <div className='Data-Container'>
 
                     <h2>Conditions</h2>
                     <Conditions 
@@ -56,6 +57,7 @@ export default class Weather extends Component{
                     sunset={this.state.sunset}
                     windSpeed = {this.state.windSpeed}
                     windDirection = {this.state.windDirection}
+                    icon={this.state.icon}
                     />
 
                 </div>
