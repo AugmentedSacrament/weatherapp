@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: none;
+    border: none;
+    font-size: 12px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+$primary:#333333;
+$secondary: #999999;
+#root{
+    background: $primary;
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper{
+    margin: 0 25%;
+    height: 100%;
+}
+/* Form CSS*/
+.form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 25%;
+    label{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    input{
+        height: 2%;
+        width: 100%;
+        font-size: 24px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $secondary;
+    }
+    button{
+        width: 50%;
+        margin: 0 25%;
+        padding: 5px;
+        font-size: 24px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        color:rgb(60, 128, 255);
+        transition-duration: 300ms
+    }
+}
